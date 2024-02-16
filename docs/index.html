@@ -74,6 +74,12 @@
     }
     addEventListener("error", (event) => unhandledError(event, event.error));
     addEventListener("unhandledrejection", (event) => unhandledError(event, event.reason));
+    window.addEventListener('load', (event) => {
+        setTimeout(() => {
+            const canvas = document.getElementById('jetsnackCanvas');
+            canvas.focus();
+        }, 100); // Dostosuj czas opóźnienia według potrzeb
+    });
 </script>
 
 </html>
